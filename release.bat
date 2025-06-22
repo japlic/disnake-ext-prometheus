@@ -13,6 +13,6 @@ echo Committing with message: %msg%
 git commit -m "%msg%"
 
 echo Pushing to origin...
-git push origin master
+git push origin main
 
 pause
