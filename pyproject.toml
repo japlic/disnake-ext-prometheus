@@ -1,0 +1,33 @@
+[project]
+name = "disnake-ext-prometheus"
+version = "0.2.1"
+authors = [{ name = "rou", email = "rou@roulab.dev" }]
+description = "An extension for the disnake library that enables Prometheus metrics"
+readme = "README.md"
+license = "MIT"
+keywords = ["Prometheus", "Discord", "Metrics", "Bot", "Analytics", "Extension"]
+requires-python = ">=3.8"
+dependencies = ["prometheus-client>=0.16.0,<1", "disnake>=2.2.3,<3"]
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+	"Natural Language :: English",
+	"Topic :: Software Development :: Libraries",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+	"Topic :: Utilities",
+]
+
+[project.optional-dependencies]
+dev = ["black", "pylint"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["./discord"]
